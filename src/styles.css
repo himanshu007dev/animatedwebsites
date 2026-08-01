@@ -1,0 +1,310 @@
+/* @import "tailwindcss"; */
+@import "tailwindcss";
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * PULSE design system — midnight indigo.
+ * Headings: Bebas Neue. Body/UI: Barlow. Both loaded via <link> in __root.tsx.
+ * All colors are oklch semantic tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Bebas Neue", "Barlow", sans-serif;
+  --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-glow: var(--glow);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.13 0.032 279);
+  --foreground: oklch(0.97 0.008 275);
+  --surface: oklch(0.19 0.048 279);
+  --surface-raised: oklch(0.25 0.075 278);
+  --card: oklch(0.19 0.048 279);
+  --card-foreground: oklch(0.97 0.008 275);
+  --popover: oklch(0.19 0.048 279);
+  --popover-foreground: oklch(0.97 0.008 275);
+  --primary: oklch(0.53 0.229 277);
+  --primary-foreground: oklch(0.98 0.006 275);
+  --glow: oklch(0.7 0.185 279);
+  --secondary: oklch(0.25 0.075 278);
+  --secondary-foreground: oklch(0.97 0.008 275);
+  --muted: oklch(0.22 0.055 279);
+  --muted-foreground: oklch(0.7 0.03 277);
+  --accent: oklch(0.53 0.229 277);
+  --accent-foreground: oklch(0.98 0.006 275);
+  --destructive: oklch(0.62 0.23 25);
+  --destructive-foreground: oklch(0.98 0.006 275);
+  --border: oklch(0.98 0.01 275 / 12%);
+  --input: oklch(0.98 0.01 275 / 16%);
+  --ring: oklch(0.53 0.229 277);
+  --chart-1: oklch(0.53 0.229 277);
+  --chart-2: oklch(0.7 0.185 279);
+  --chart-3: oklch(0.62 0.14 250);
+  --chart-4: oklch(0.45 0.16 285);
+  --chart-5: oklch(0.8 0.1 270);
+  --sidebar: oklch(0.16 0.04 279);
+  --sidebar-foreground: oklch(0.97 0.008 275);
+  --sidebar-primary: oklch(0.53 0.229 277);
+  --sidebar-primary-foreground: oklch(0.98 0.006 275);
+  --sidebar-accent: oklch(0.25 0.075 278);
+  --sidebar-accent-foreground: oklch(0.97 0.008 275);
+  --sidebar-border: oklch(0.98 0.01 275 / 12%);
+  --sidebar-ring: oklch(0.53 0.229 277);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@keyframes pulse-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes glow-sweep {
+  0% {
+    transform: translateX(-120%) skewX(-18deg);
+  }
+
+  100% {
+    transform: translateX(320%) skewX(-18deg);
+  }
+}
+
+@keyframes slow-drift {
+
+  0%,
+  100% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale(1.14) translate3d(0, -2%, 0);
+  }
+}
+
+@keyframes aurora {
+
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate3d(-4%, 0, 0) scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translate3d(4%, -3%, 0) scale(1.15);
+  }
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+@utility reveal-in {
+  animation: pulse-rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility drift {
+  animation: slow-drift 22s ease-in-out infinite;
+}
+
+@utility aurora-blob {
+  animation: aurora 16s ease-in-out infinite;
+}
+
+@utility ticker-track {
+  animation: ticker 32s linear infinite;
+}
+
+@utility glow-button {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(90deg,
+        transparent,
+        color-mix(in oklab, var(--color-foreground) 35%, transparent),
+        transparent);
+    animation: glow-sweep 3.4s ease-in-out infinite;
+  }
+}
+
+@utility tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+  background: linear-gradient(150deg,
+      color-mix(in oklab, var(--color-surface) 92%, transparent),
+      color-mix(in oklab, var(--color-background) 88%, transparent));
+  transition:
+    border-color 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s ease;
+
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 55%, transparent);
+    box-shadow: 0 24px 60px -30px color-mix(in oklab, var(--color-glow) 70%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Modern Scrollbar */
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+      var(--color-primary),
+      color-mix(in oklab, var(--color-primary) 70%, black));
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+      var(--color-glow),
+      var(--color-primary));
+  background-clip: content-box;
+  box-shadow: 0 0 12px color-mix(in oklab, var(--color-glow) 60%, transparent);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-glow);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) transparent;
+}
