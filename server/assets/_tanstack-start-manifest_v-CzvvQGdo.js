@@ -7,27 +7,27 @@ var tsrStartManifest = () => ({ routes: {
 			"/about",
 			"/dashboard"
 		],
-		preloads: ["/fitness/assets/index-4hRn2Ent.js"],
+		preloads: ["/animatedwebsites/assets/index-CCRYqHCC.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/fitness/assets/index-4hRn2Ent.js"
+			src: "/animatedwebsites/assets/index-CCRYqHCC.js"
 		} }]
 	},
 	"/": {
 		filePath: "C:/Users/Lenovo/Desktop/qwe/fitness/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/fitness/assets/routes-DdZHYFXP.js", "/fitness/assets/site-footer-DezuxREa.js"]
+		preloads: ["/animatedwebsites/assets/routes-DRiFLGbx.js", "/animatedwebsites/assets/site-footer-KGb2g3yF.js"]
 	},
 	"/about": {
 		filePath: "C:/Users/Lenovo/Desktop/qwe/fitness/src/routes/about.tsx",
 		children: void 0,
-		preloads: ["/fitness/assets/about-D0Fy3pxv.js"]
+		preloads: ["/animatedwebsites/assets/about-CeLycd_t.js"]
 	},
 	"/dashboard": {
 		filePath: "C:/Users/Lenovo/Desktop/qwe/fitness/src/routes/dashboard.tsx",
 		children: void 0,
-		preloads: ["/fitness/assets/dashboard-Dc25vgdj.js", "/fitness/assets/site-footer-DezuxREa.js"]
+		preloads: ["/animatedwebsites/assets/dashboard-DrZLnnTu.js", "/animatedwebsites/assets/site-footer-KGb2g3yF.js"]
 	}
 } });
 //#endregion

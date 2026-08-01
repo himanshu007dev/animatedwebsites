@@ -3,7 +3,7 @@ import { HeadContent, Link, Outlet, Scripts, createFileRoute, createRootRouteWit
 import { jsx, jsxs } from "react/jsx-runtime";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 //#region src/styles.css?url
-var styles_default = "/fitness/assets/styles-BQQmhqKh.css";
+var styles_default = "/animatedwebsites/assets/styles-BQQmhqKh.css";
 //#endregion
 //#region src/lib/server-error-reporting.ts
 function reportServerError(error, context = {}) {
@@ -174,7 +174,7 @@ function RootComponent() {
 }
 //#endregion
 //#region src/routes/index.tsx
-var $$splitComponentImporter$2 = () => import("./routes-DC6e7Fby.js");
+var $$splitComponentImporter$2 = () => import("./routes-D_qBiJC7.js");
 var Route$2 = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "PULSE — Strength Training That Compounds" },

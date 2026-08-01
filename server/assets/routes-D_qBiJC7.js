@@ -154,28 +154,28 @@ var tiers = [{
 }];
 //#endregion
 //#region src/assets/hero-athlete.jpg
-var hero_athlete_default = "/fitness/assets/hero-athlete-DMa7RU88.jpg";
+var hero_athlete_default = "/animatedwebsites/assets/hero-athlete-DMa7RU88.jpg";
 //#endregion
 //#region src/assets/program-strength.jpg
-var program_strength_default = "/fitness/assets/program-strength-D6TIg0No.jpg";
+var program_strength_default = "/animatedwebsites/assets/program-strength-D6TIg0No.jpg";
 //#endregion
 //#region src/assets/program-conditioning.jpg
-var program_conditioning_default = "/fitness/assets/program-conditioning-B7TPcDM3.jpg";
+var program_conditioning_default = "/animatedwebsites/assets/program-conditioning-B7TPcDM3.jpg";
 //#endregion
 //#region src/assets/program-mobility.jpg
-var program_mobility_default = "/fitness/assets/program-mobility-B8768XH1.jpg";
+var program_mobility_default = "/animatedwebsites/assets/program-mobility-B8768XH1.jpg";
 //#endregion
 //#region src/assets/coach-1.jpg
-var coach_1_default = "/fitness/assets/coach-1-XlyHwnpF.jpg";
+var coach_1_default = "/animatedwebsites/assets/coach-1-XlyHwnpF.jpg";
 //#endregion
 //#region src/assets/coach-2.jpg
-var coach_2_default = "/fitness/assets/coach-2-B1lruNYC.jpg";
+var coach_2_default = "/animatedwebsites/assets/coach-2-B1lruNYC.jpg";
 //#endregion
 //#region src/assets/coach-3.jpg
-var coach_3_default = "/fitness/assets/coach-3-BM6ba5cX.jpg";
+var coach_3_default = "/animatedwebsites/assets/coach-3-BM6ba5cX.jpg";
 //#endregion
 //#region src/assets/cta-gym.jpg
-var cta_gym_default = "/fitness/assets/cta-gym-By0IHS41.jpg";
+var cta_gym_default = "/animatedwebsites/assets/cta-gym-By0IHS41.jpg";
 //#endregion
 //#region src/routes/index.tsx?tsr-split=component
 var coachPhotos = [
