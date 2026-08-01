@@ -8,9 +8,8 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
-    "build": "tsr generate && vite build",
+    "build": "vite build --preset vercel",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
     "lint": "eslint",
     "format": "prettier --write . && eslint --fix",
     "check": "prettier --check ."
