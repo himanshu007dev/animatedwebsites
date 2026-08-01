@@ -9,7 +9,10 @@ import tailwindcss from '@tailwindcss/vite'
 const config = defineConfig({
   resolve: { tsconfigPaths: true },
   plugins: [devtools(), tailwindcss(), tanstackStart(), viteReact()],
-  base: process.env.VITE_BASE_PATH || '/animatedwebsites',
+  base: '/animatedwebsites/',
+  build: {
+    outDir: 'dist',
+  },
 })
 
 export default config
